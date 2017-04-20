@@ -12,10 +12,12 @@ import com.google.gson.Gson;
 
 import javax.xml.transform.Result;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView t_1;
     private Button btn_1;
+    private String testStr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,35 +26,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initListener();
     }
 
-    private void initView(){
-        t_1=(TextView)findViewById(R.id.t_1);
-        btn_1=(Button)findViewById(R.id.btn_1);
+    private void initView() {
+        t_1 = (TextView) findViewById(R.id.t_1);
+        btn_1 = (Button) findViewById(R.id.btn_1);
     }
 
-    private void initListener(){
+    private void initListener() {
         btn_1.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        Async async=new Async();
+        Async async = new Async();
         async.execute("苏州");
     }
 
-    public static String excute(String cityName){
-        String url="http://v.juhe.cn/weather/index?&cityname="+cityName+"&key=a3b12671d03faa0f2d047e0980b39dbe";
+    public String excute(String cityName) {
+        String url = "http://v.juhe.cn/weather/index?&cityname=" + cityName + "&key=a3b12671d03faa0f2d047e0980b39dbe";
         return PureNetUtil.get(url);
     }
 
-    public static String GetByCity(String city){
-        String result=excute(city);
-        Log.i("abc", "GetByCity: "+result);
-        if(result!=null){
-            Gson gson=new Gson();
-            Bean bean=gson.fromJson(result,Bean.class);
-            Log.i("2", "bean: "+bean.toString());
-            result=bean.getResultcode();
-            if(result!=null&&result.equals("200")){
+    public String GetByCity(String city) {
+        String result = excute(city);
+        Log.i("abc", "GetByCity: " + result);
+        if (result != null) {
+            Gson gson = new Gson();
+            Bean bean = gson.fromJson(result, Bean.class);
+            Log.i("2", "bean: " + bean.toString());
+            testStr = bean.getResult().getSk().getTemp();
+            result = bean.getResultcode();
+            if (result != null && result.equals("200")) {
                 return bean.toString();
             }
         }
@@ -60,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    private class Async extends AsyncTask<String,Integer,String>{
+    private class Async extends AsyncTask<String, Integer, String> {
         @Override
         protected String doInBackground(String... strings) {
             return GetByCity(strings[0]);
@@ -68,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         @Override
         protected void onPostExecute(String s) {
-            t_1.setText(s);
+            Log.e("123", s);
+            t_1.setText("温度" + testStr);
         }
     }
 
