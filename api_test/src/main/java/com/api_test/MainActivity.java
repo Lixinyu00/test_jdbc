@@ -54,12 +54,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Bean bean = gson.fromJson(result, Bean.class);
             Log.i("2", "bean: " + bean.toString());
             testStr = bean.getResult().getSk().getTemp();
-            result = bean.getResultcode();
-            if (result != null && result.equals("200")) {
-                return bean.toString();
+            String code = bean.getResultcode();
+            if (code != null && code.equals("200")) {
+                result =  bean.toString();
+            } else {
+                result = null;
             }
+        } else {
+            result = "error";
         }
-        return "error";
+        return result;
     }
 
 
@@ -72,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         protected void onPostExecute(String s) {
             Log.e("123", s);
-            t_1.setText("温度" + testStr);
+            t_1.setText("温度：" + testStr);
         }
     }
 
