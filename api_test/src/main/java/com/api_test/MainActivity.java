@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Gson gson = new Gson();
             Bean bean = gson.fromJson(result, Bean.class);
             Log.i("2", "bean: " + bean.toString());
+            // 全局变量 想要啥就有啥
             testStr = bean.getResult().getSk().getTemp();
             String code = bean.getResultcode();
             if (code != null && code.equals("200")) {
