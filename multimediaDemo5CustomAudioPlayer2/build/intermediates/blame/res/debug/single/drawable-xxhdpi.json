@@ -1,6 +1,10 @@
 [
     {
-        "merged": "F:\\Android\\workspace_lxy\\test_jdbc\\multimediaDemo5CustomAudioPlayer2\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
-        "source": "F:\\Android\\workspace_lxy\\test_jdbc\\multimediaDemo5CustomAudioPlayer2\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/dawn/AndroidStudio/test_jdbc/multimediaDemo5CustomAudioPlayer2/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/dawn/AndroidStudio/test_jdbc/multimediaDemo5CustomAudioPlayer2/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dawn/AndroidStudio/test_jdbc/F:\\Android\\workspace_lxy\\test_jdbc\\multimediaDemo5CustomAudioPlayer2\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
+        "source": "/Users/dawn/AndroidStudio/test_jdbc/F:\\Android\\workspace_lxy\\test_jdbc\\multimediaDemo5CustomAudioPlayer2\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     }
 ]
