@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api_test/api_test.iml" filepath="$PROJECT_DIR$/api_test/api_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lixinyu/lixinyu.iml" filepath="$PROJECT_DIR$/lixinyu/lixinyu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multimediaDemo5CustomAudioPlayer2/multimediaDemo5CustomAudioPlayer2.iml" filepath="$PROJECT_DIR$/multimediaDemo5CustomAudioPlayer2/multimediaDemo5CustomAudioPlayer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test_jdbc.iml" filepath="$PROJECT_DIR$/test_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wangtao/wangtao.iml" filepath="$PROJECT_DIR$/wangtao/wangtao.iml" />
+    </modules>
+  </component>
+</project>

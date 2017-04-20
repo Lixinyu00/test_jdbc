@@ -1,0 +1,2 @@
+include ':app', ':lixinyu', ':wangtao', ':api_test'
+include ':multimediaDemo5CustomAudioPlayer2'
