@@ -19,16 +19,6 @@ public class Bean {
     private ResultBean result;
     private int error_code;
 
-    @Override
-    public String toString() {
-        return "Bean{" +
-                "resultcode='" + resultcode + '\'' +
-                ", reason='" + reason + '\'' +
-                ", result=" + result +
-                ", error_code=" + error_code +
-                '}';
-    }
-
     public String getResultcode() {
         return resultcode;
     }
@@ -72,14 +62,6 @@ public class Bean {
         private TodayBean today;
         private FutureBean future;
 
-        @Override
-        public String toString() {
-            return "ResultBean{" +
-                    "sk=" + sk +
-                    ", today=" + today +
-                    ", future=" + future +
-                    '}';
-        }
 
         public SkBean getSk() {
             return sk;
@@ -122,9 +104,11 @@ public class Bean {
 
             @Override
             public String toString() {
-                return "温度"+temp;
+                return "当前天气：" +
+                        "\n温度=" + temp + "℃\n风向=" + wind_direction  +
+                        "\n风力=" + wind_strength + "\n湿度=" + humidity +
+                        "\n当前时间=" + time;
             }
-
             public String getTemp() {
                 return temp;
             }
@@ -200,6 +184,26 @@ public class Bean {
             private String travel_index;
             private String exercise_index;
             private String drying_index;
+
+            @Override
+            public String toString() {
+                return "TodayBean{" +
+                        "temperature='" + temperature + '\'' +
+                        ", weather='" + weather + '\'' +
+                        ", wind='" + wind + '\'' +
+                        ", week='" + week + '\'' +
+                        ", city='" + city + '\'' +
+                        ", date_y='" + date_y + '\'' +
+                        ", dressing_index='" + dressing_index + '\'' +
+                        ", dressing_advice='" + dressing_advice + '\'' +
+                        ", uv_index='" + uv_index + '\'' +
+                        ", comfort_index='" + comfort_index + '\'' +
+                        ", wash_index='" + wash_index + '\'' +
+                        ", travel_index='" + travel_index + '\'' +
+                        ", exercise_index='" + exercise_index + '\'' +
+                        ", drying_index='" + drying_index + '\'' +
+                        '}';
+            }
 
             public String getTemperature() {
                 return temperature;

@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Users/dawn/AndroidStudio/test_jdbc/F:\\Android\\workspace_lxy\\test_jdbc\\multimediaDemo5CustomAudioPlayer2\\build\\intermediates\\res\\merged\\debug\\layout\\activity_audio_browser.xml",
-        "source": "/Users/dawn/AndroidStudio/test_jdbc/F:\\Android\\workspace_lxy\\test_jdbc\\multimediaDemo5CustomAudioPlayer2\\src\\main\\res\\layout\\activity_audio_browser.xml"
-    },
-    {
-        "merged": "/Users/dawn/AndroidStudio/test_jdbc/multimediaDemo5CustomAudioPlayer2/build/intermediates/res/merged/debug/layout/activity_audio_browser.xml",
-        "source": "/Users/dawn/AndroidStudio/test_jdbc/multimediaDemo5CustomAudioPlayer2/src/main/res/layout/activity_audio_browser.xml"
+        "merged": "F:\\Android\\workspace_lxy\\test_jdbc\\multimediaDemo5CustomAudioPlayer2\\build\\intermediates\\res\\merged\\debug\\layout\\activity_audio_browser.xml",
+        "source": "F:\\Android\\workspace_lxy\\test_jdbc\\multimediaDemo5CustomAudioPlayer2\\src\\main\\res\\layout\\activity_audio_browser.xml"
     }
 ]

@@ -10,13 +10,10 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 
-import javax.xml.transform.Result;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView t_1;
     private Button btn_1;
-    private String testStr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Gson gson = new Gson();
             Bean bean = gson.fromJson(result, Bean.class);
             Log.i("2", "bean: " + bean.toString());
-            // 全局变量 想要啥就有啥
-            testStr = bean.getResult().getSk().getTemp();
             String code = bean.getResultcode();
             if (code != null && code.equals("200")) {
-                result =  bean.toString();
+                result =  bean.getResult().getSk().toString()+bean.getResult().getToday().toString();
             } else {
                 result = null;
             }
@@ -76,8 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         @Override
         protected void onPostExecute(String s) {
-            Log.e("123", s);
-            t_1.setText("温度：" + testStr);
+            t_1.setText(s);
         }
     }
 
