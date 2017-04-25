@@ -26,7 +26,7 @@ public class PureNetUtil {
      * 设定post方法获取网络资源,如果参数为null,实际上设定为get方法
      * @param url 网络地址
      * @param param 请求参数键值对
-     * @return 返回读取数据
+     * @return 返回Json数据
      */
     public static String post(String url, Map  param){
         HttpURLConnection connection=null;
