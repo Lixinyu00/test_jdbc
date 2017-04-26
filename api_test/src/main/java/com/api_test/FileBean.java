@@ -11,10 +11,6 @@ public class FileBean extends BmobObject {
     private String id;
     private BmobFile file;
 
-    public FileBean(String id, BmobFile file) {
-        this.id = id;
-        this.file = file;
-    }
 
     public String getId() {
         return id;
